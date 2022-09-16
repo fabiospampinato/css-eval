@@ -1,6 +1,6 @@
 # CSS Eval
 
-Tiny function for fully evaluating CSS properties and variables on a target element.
+Tiny library for fully evaluating CSS properties and variables on a target element.
 
 ## Install
 
