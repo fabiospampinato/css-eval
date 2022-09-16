@@ -1,0 +1,28 @@
+{
+  "name": "css-eval",
+  "repository": "github:fabiospampinato/css-eval",
+  "description": "Tiny function for fully evaluating CSS properties and variables on a target element.",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "clean": "tsex clean",
+    "compile": "tsex compile",
+    "compile:watch": "tsex compile --watch",
+    "prepublishOnly": "npm run clean && npm run compile"
+  },
+  "keywords": [
+    "css",
+    "eval",
+    "resolve",
+    "expression",
+    "calculate",
+    "calc"
+  ],
+  "devDependencies": {
+    "tsex": "^1.1.2",
+    "typescript": "^4.8.3"
+  }
+}
