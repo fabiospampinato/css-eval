@@ -2,7 +2,7 @@
   "name": "css-eval",
   "repository": "github:fabiospampinato/css-eval",
   "description": "Tiny function for fully evaluating CSS properties and variables on a target element.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "main": "dist/index.js",
   "exports": "./dist/index.js",
