@@ -47,7 +47,7 @@ const resolve = ( property: string, value: string, target: HTMLElement | SVGElem
 
     DUMMY.style[property] = value;
 
-    const valueResolved = get ( property, DUMMY );
+    const valueResolved = ( property === 'min-width' ) ? get ( property, DUMMY ) : `${DUMMY.clientWidth}px`; // Forcing "min-width" to be measured in pixels
 
     DUMMY.style[property] = '';
 
@@ -71,7 +71,7 @@ const resolveAngle = ( value: string, target: HTMLElement | SVGElement | MathMLE
 
 const resolveLength = ( value: string, target: HTMLElement | SVGElement | MathMLElement ): string => {
 
-  return resolve ( 'outline-width', value, target );
+  return resolve ( 'min-width', value, target );
 
 };
 
