@@ -47,7 +47,7 @@ const resolve = ( property: string, value: string, target: HTMLElement | SVGElem
 
   DUMMY.style[property] = value;
 
-  const valueResolved = ( property === 'min-width' ) ? get ( property, DUMMY ) : `${DUMMY.clientWidth}px`; // Forcing "min-width" to be measured in pixels
+  const valueResolved = get ( property, DUMMY );
 
   DUMMY.style[property] = '';
 
