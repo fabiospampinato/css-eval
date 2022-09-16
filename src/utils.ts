@@ -41,25 +41,19 @@ const parseTime = ( value: string ): number => {
 
 const resolve = ( property: string, value: string, target: HTMLElement | SVGElement | MathMLElement ): string => {
 
-  if ( value.includes ( '(' ) ) { // Something to actually resolve //TODO: Always use custom registered properties instead, once they become widely supported (https://developer.mozilla.org/en-US/docs/Web/API/CSS/RegisterProperty)
+  //TODO: Always use custom registered properties instead of SPAN, once they become widely supported (https://developer.mozilla.org/en-US/docs/Web/API/CSS/RegisterProperty)
 
-    target.appendChild ( DUMMY );
+  target.appendChild ( DUMMY );
 
-    DUMMY.style[property] = value;
+  DUMMY.style[property] = value;
 
-    const valueResolved = ( property === 'min-width' ) ? get ( property, DUMMY ) : `${DUMMY.clientWidth}px`; // Forcing "min-width" to be measured in pixels
+  const valueResolved = ( property === 'min-width' ) ? get ( property, DUMMY ) : `${DUMMY.clientWidth}px`; // Forcing "min-width" to be measured in pixels
 
-    DUMMY.style[property] = '';
+  DUMMY.style[property] = '';
 
-    target.removeChild ( DUMMY );
+  target.removeChild ( DUMMY );
 
-    return valueResolved;
-
-  } else { // Nothing to actually resolve
-
-    return value;
-
-  }
+  return valueResolved;
 
 };
 
