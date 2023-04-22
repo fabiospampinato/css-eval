@@ -33,7 +33,7 @@ Eval.getLength ( '--custom' );
 Eval.getTime ( 'transition-duration' );
 Eval.getTime ( '--custom' );
 
-// Explicitly setting a target element, otherwise will it be "document.body" by default
+// Explicitly setting a target element, otherwise it will be "document.body" by default
 
 Eval.getLength ( '--custom', document.querySelector ( '#foo' ) );
 ```
