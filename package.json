@@ -22,7 +22,7 @@
     "calc"
   ],
   "devDependencies": {
-    "tsex": "^2.2.0",
-    "typescript": "^4.9.5"
+    "tsex": "^3.0.1",
+    "typescript": "^5.1.6"
   }
 }
