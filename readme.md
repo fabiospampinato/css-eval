@@ -5,7 +5,7 @@ Tiny library for fully evaluating CSS properties and variables on a target eleme
 ## Install
 
 ```sh
-npm install --save css-eval
+npm install css-eval
 ```
 
 ## Usage
@@ -28,7 +28,7 @@ import Eval from 'css-eval';
 
 const target = document.querySelector ( '#foo' );
 
-// Reading an unresolved style property or variable
+// Reading an unresolved style property or variable, as a string
 
 Eval.get ( 'width' );
 Eval.get ( 'width', target );
